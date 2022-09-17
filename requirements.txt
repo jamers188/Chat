@@ -62,6 +62,7 @@ scipy==1.4.1
 seaborn==0.10.1
 Send2Trash==1.5.0
 six==1.15.0
+streamlit-chat==0.0.2.1
 streamlit==0.61.0
 terminado==0.8.3
 testpath==0.4.4
@@ -70,6 +71,7 @@ toml==0.10.1
 toolz==0.10.0
 tornado==5.0
 traitlets==4.3.3
+transformers==4.22.1
 tweepy==3.8.0
 tzlocal==2.1
 urllib3==1.25.9
