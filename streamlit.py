@@ -1,8 +1,6 @@
 import streamlit as st
 from streamlit_chat import message as st_message
-from transformers import BlenderbotTokenizer
-from transformers import BlenderbotForConditionalGeneration
-
+from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
 
 @st.experimental_singleton
 def get_models():
