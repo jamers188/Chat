@@ -2,3 +2,6 @@
 streamlit-chat
 streamlit
 transformers
+torch
+torchvision
+torchaudio
