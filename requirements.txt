@@ -1,4 +1,4 @@
 
 streamlit-chat
-streamlit==0.61.0
+streamlit
 transformers
