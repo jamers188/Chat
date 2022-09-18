@@ -1,2 +1,4 @@
 
-
+streamlit-chat
+streamlit==0.61.0
+transformers==4.22.1
