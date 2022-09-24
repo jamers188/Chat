@@ -19,7 +19,14 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 st.title("Therapy Chatbot")
-
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://img.freepik.com/free-photo/pastel-background-sky-feminine-style_53876-104862.jpg?size=626&ext=jpg");
+background-size: cover;
+}
+</style>
+'''
 
 def generate_answer():
     tokenizer, model = get_models()
