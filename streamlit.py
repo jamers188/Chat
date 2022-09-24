@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_chat import message as st_message
 from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
 from PIL import Image
-image = Image.open('Mental Health.png')
+image = Image.open('1.jpg')
 
 st.sidebar.image(image)
 @st.experimental_singleton
