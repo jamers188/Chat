@@ -5,6 +5,12 @@ from PIL import Image
 image = Image.open('Mental Health (1).png')
 
 st.sidebar.image(image)
+
+image = Image.open('header.png')
+
+st.image(image, caption=' ')
+
+
 @st.experimental_singleton
 def get_models():
     # it may be necessary for other frameworks to cache the model
