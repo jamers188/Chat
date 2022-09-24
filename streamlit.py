@@ -66,4 +66,5 @@ for chat in st.session_state.history:
 
 
 st.write(st.session_state.history)
-
+#for i in st.session_state.history:
+    
