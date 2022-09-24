@@ -2,6 +2,9 @@ import streamlit as st
 from streamlit_chat import message as st_message
 from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
 from PIL import Image
+
+st.set_page_config(layout="wide")
+
 image = Image.open('Mental Health (1).png')
 
 st.sidebar.image(image)
