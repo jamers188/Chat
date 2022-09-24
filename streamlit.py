@@ -27,13 +27,14 @@ background-size: cover;
 }
 </style>
 '''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 hide_menu_style = """
         <style>
         #MainMenu {visibility: hidden; }
         footer {visibility: hidden;}
         </style>
         """
-st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 def generate_answer():
