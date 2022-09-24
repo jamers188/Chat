@@ -34,7 +34,7 @@ hide_menu_style = """
         </style>
         """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-d
+
 
 def generate_answer():
     tokenizer, model = get_models()
