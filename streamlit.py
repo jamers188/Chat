@@ -1,7 +1,10 @@
 import streamlit as st
 from streamlit_chat import message as st_message
 from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
+from PIL import Image
+image = Image.open('sidebar1.png')
 
+st.sidebar.image(image)
 @st.experimental_singleton
 def get_models():
     # it may be necessary for other frameworks to cache the model
