@@ -27,6 +27,13 @@ background-size: cover;
 }
 </style>
 '''
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden; }
+        footer {visibility: hidden;}
+        </style>
+        """
+
 
 def generate_answer():
     tokenizer, model = get_models()
