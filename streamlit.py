@@ -24,7 +24,7 @@ def get_models():
 if "history" not in st.session_state:
     st.session_state.history = []
 
-st.title("Therapy Chatbot")
+st.title("Talk To The Bot")
 
 
 def add_bg_from_url():
@@ -58,7 +58,7 @@ def generate_answer():
     st.session_state.history.append({"message": message_bot, "is_user": False})
 
 
-st.text_input("Talk to the bot", key="input_text", on_change=generate_answer)
+st.text_input("", key="input_text", on_change=generate_answer)
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
