@@ -64,7 +64,52 @@ for chat in st.session_state.history:
     st_message(**chat)  # unpacking
  
 
+for i in st.session_state.history:
+    print(i)
+
+
 
 st.write(st.session_state.history)
-#for i in st.session_state.history:
+import tweepy
+from  textblob import TextBlob 
+import pandas as pd
+import numpy as np
+import re
+
+consumer_key = "pTivamyKt0GtxZiFizMMhsouj"
+consumer_sec = "HEkXmzyaALIAD1AfTHLdRnegC8rstIY2AUHbrzvRGIjoJl3PCo"
+
+# from proxy server we need to connect
+access_token = "1490018179690602500-6dR6g69GHBE1fMZICvqyDMKrJINNyS"
+access_token_sec = "ZAjbICteZd6FsbWEHeP2SIlmmdIycSEvgoOfJaXjf9wTs"
+dir(tweepy)
+
+auth=tweepy.OAuthHandler(consumer_key,consumer_sec)
+
+auth.set_access_token(access_token,access_token_sec)
+
+api_connect=tweepy.API(auth)
+
+auth = tweepy.OAuthHandler(consumer_key,consumer_sec)
+auth.set_access_token(access_token,access_token_sec)
+api = tweepy.API(auth)
+
+
+
+def getPolarity(text):
+   return  TextBlob(text).sentiment.polarity
+
+
+
+for i in st.session_state.history:
+    score=getPolarity(i)
+    if(score<0):
+        st.header("Sentimental Analysis of Tweets")
+        st.header("The person is depressed!!!")
+    else:
+        st.header("Sentimental Analysis of Tweets")
+        st.header("The person is not depressed!!")
+    
+ 
+
     
