@@ -6,8 +6,4 @@ torch
 torchvision
 torchaudio
 Pillow
-tweepy
-TextBlob 
-pandas 
-numpy
-re
+
