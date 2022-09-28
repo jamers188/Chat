@@ -61,7 +61,7 @@ def generate_answer():
     st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
     u=user_message
-    a.append(u)
+    st.a.append(u)
 st.write(a)
 
 
