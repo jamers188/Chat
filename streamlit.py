@@ -66,7 +66,6 @@ def generate_answer():
 
 a.append(st.text_input("", key="input_text", on_change=generate_answer))
 
-
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
-
+st.write(a)
