@@ -62,7 +62,7 @@ def generate_answer():
     st.session_state.history.append({"message": message_bot, "is_user": False})
     u=user_message
     a.append(u)
-    st.write(a)
+st.write(a)
 
 
 st.text_input("", key="input_text", on_change=generate_answer)
