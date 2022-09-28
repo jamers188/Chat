@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_chat import message as st_message
 from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
 from PIL import Image
-
+from textblob import TextBlob
 st.set_page_config(layout="wide")
 
 image = Image.open('Mental Health (1).png')
@@ -64,6 +64,31 @@ def generate_answer():
 
 
 a.append(st.text_input("", key="input_text", on_change=generate_answer))
+
+
+
+text = TextBlob(a)
+print(text.sentiment)
+f=getPolarity(text)
+st.write(getAnalysis(f))
+def getPolarity(text):
+    return TextBlob(text).sentiment.polarity
+
+
+ def getAnalysis(score):
+  if score < 0:
+    return ‘Negative’
+  elif score == 0:
+    return ‘Neutral’
+  else:
+    return ‘Positive’
+
+
+
+
+
+
+
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
