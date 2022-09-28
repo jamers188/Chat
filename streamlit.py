@@ -12,7 +12,7 @@ st.sidebar.image(image)
 image = Image.open('header.png')
 
 st.image(image, caption=' ')
-
+a=[]
 
 @st.experimental_singleton
 def get_models():
@@ -59,13 +59,14 @@ def generate_answer():
 
     st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
+    a.append(user_message)
 
 
 st.text_input("", key="input_text", on_change=generate_answer)
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
-for i in st.session_state.history:
-    st.write(i[0])
+for i in a:
+    st.write(i)
  
     
