@@ -48,7 +48,6 @@ add_bg_from_url()
 
 
 global a,m
-m=" "
 a=[]
 def generate_answer():
     tokenizer, model = get_models()
@@ -63,7 +62,7 @@ def generate_answer():
     st.session_state.history.append({"message": message_bot, "is_user": False})
     u=user_message
     a.append(u)
-    m+=u
+    st.write(a)
 
 
 st.text_input("", key="input_text", on_change=generate_answer)
@@ -71,5 +70,3 @@ st.text_input("", key="input_text", on_change=generate_answer)
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
 
-st.write(a)
-st.write(m)
