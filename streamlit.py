@@ -47,7 +47,8 @@ def add_bg_from_url():
 add_bg_from_url() 
 
 
-global a=[]
+global a
+a=[]
 def generate_answer():
     tokenizer, model = get_models()
     user_message = st.session_state.input_text
