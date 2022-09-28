@@ -47,7 +47,7 @@ def add_bg_from_url():
 add_bg_from_url() 
 
 
-a=[]
+
 def generate_answer():
     tokenizer, model = get_models()
     user_message = st.session_state.input_text
@@ -63,12 +63,11 @@ def generate_answer():
 
 
 
-a.append(st.text_input("", key="input_text", on_change=generate_answer))
+a=st.text_input("", key="input_text", on_change=generate_answer)
 
 
 
-text = TextBlob(str(*a))
-print(text.sentiment)
+text = str(a)
 f=getPolarity(text)
 def getPolarity(text):
     return TextBlob(text).sentiment.polarity
