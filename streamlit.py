@@ -6,7 +6,7 @@ from textblob import TextBlob
 st.set_page_config(layout="wide")
 
 image = Image.open('Mental Health (1).png')
-t=0
+global t=0
 st.sidebar.image(image)
 
 image = Image.open('header.png')
@@ -81,3 +81,4 @@ st.write(t)
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
+st.write(t)
