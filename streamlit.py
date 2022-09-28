@@ -12,7 +12,7 @@ st.sidebar.image(image)
 image = Image.open('header.png')
 
 st.image(image, caption=' ')
-a=[]
+
 
 @st.experimental_singleton
 def get_models():
@@ -47,7 +47,7 @@ def add_bg_from_url():
 add_bg_from_url() 
 
 
-
+global a=[]
 def generate_answer():
     tokenizer, model = get_models()
     user_message = st.session_state.input_text
@@ -59,7 +59,7 @@ def generate_answer():
 
     st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
-    st.write(user_message)
+    a.append(user_message)
 
 
 st.text_input("", key="input_text", on_change=generate_answer)
