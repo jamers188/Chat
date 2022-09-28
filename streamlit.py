@@ -67,7 +67,7 @@ a.append(st.text_input("", key="input_text", on_change=generate_answer))
 
 
 
-text = TextBlob(a)
+text = TextBlob(str(*a))
 print(text.sentiment)
 f=getPolarity(text)
 def getPolarity(text):
