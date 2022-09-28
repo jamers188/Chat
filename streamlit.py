@@ -47,7 +47,7 @@ def add_bg_from_url():
 add_bg_from_url() 
 
 
-global a,m=0
+global a
 a=[]
 def generate_answer():
     tokenizer, model = get_models()
