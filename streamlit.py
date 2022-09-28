@@ -70,6 +70,7 @@ a=st.text_input("", key="input_text", on_change=generate_answer)
 text = str(a)
 f=TextBlob(text).sentiment.polarity
 t+=f
+st.write(t)
 
 
 
@@ -80,4 +81,3 @@ t+=f
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
-st.write(t)
