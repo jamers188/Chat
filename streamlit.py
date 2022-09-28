@@ -6,7 +6,7 @@ from textblob import TextBlob
 st.set_page_config(layout="wide")
 
 image = Image.open('Mental Health (1).png')
-global t=0
+global t
 st.sidebar.image(image)
 
 image = Image.open('header.png')
