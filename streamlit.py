@@ -6,7 +6,7 @@ from textblob import TextBlob
 st.set_page_config(layout="wide")
 
 image = Image.open('Mental Health (1).png')
-
+t=0
 st.sidebar.image(image)
 
 image = Image.open('header.png')
@@ -69,8 +69,7 @@ a=st.text_input("", key="input_text", on_change=generate_answer)
 
 text = str(a)
 f=TextBlob(text).sentiment.polarity
-
-st.write(f)
+t+=f
 
 
 
@@ -81,4 +80,4 @@ st.write(f)
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
-st.write(a)
+st.write(t)
