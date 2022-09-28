@@ -70,17 +70,10 @@ a.append(st.text_input("", key="input_text", on_change=generate_answer))
 text = TextBlob(a)
 print(text.sentiment)
 f=getPolarity(text)
-st.write(getAnalysis(f))
 def getPolarity(text):
     return TextBlob(text).sentiment.polarity
 
-def getAnalysis(score):
-    if score < 0:
-        return ‘Negative’
-    elif score == 0:
-        return ‘Neutral’
-    else:
-        return ‘Positive’
+st.write(f)
 
 
 
