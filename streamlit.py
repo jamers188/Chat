@@ -59,7 +59,7 @@ def generate_answer():
 
     st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
-    a.append()
+    st.write(user_message)
 
 
 st.text_input("", key="input_text", on_change=generate_answer)
@@ -67,6 +67,5 @@ st.text_input("", key="input_text", on_change=generate_answer)
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
 
-st.write(a)
  
     
