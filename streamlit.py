@@ -74,14 +74,13 @@ st.write(getAnalysis(f))
 def getPolarity(text):
     return TextBlob(text).sentiment.polarity
 
-
- def getAnalysis(score):
-  if score < 0:
-    return ‘Negative’
-  elif score == 0:
-    return ‘Neutral’
-  else:
-    return ‘Positive’
+def getAnalysis(score):
+    if score < 0:
+        return ‘Negative’
+    elif score == 0:
+        return ‘Neutral’
+    else:
+        return ‘Positive’
 
 
 
