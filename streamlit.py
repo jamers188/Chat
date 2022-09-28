@@ -66,7 +66,6 @@ st.text_input("", key="input_text", on_change=generate_answer)
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
-for i in a:
-    st.write(i)
+st.write(a)
  
     
