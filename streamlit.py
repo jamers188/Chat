@@ -68,9 +68,7 @@ a=st.text_input("", key="input_text", on_change=generate_answer)
 
 
 text = str(a)
-f=getPolarity(text)
-def getPolarity(text):
-    return TextBlob(text).sentiment.polarity
+f=TextBlob(text).sentiment.polarity
 
 st.write(f)
 
