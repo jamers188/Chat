@@ -34,7 +34,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/01/Pink-Abstract-Floral-Background.jpg");
+             background-image: url("https://images.pexels.com/photos/9140283/pexels-photo-9140283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
              background-attachment: fixed;
              background-size: cover
          }}
