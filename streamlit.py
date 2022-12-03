@@ -6,6 +6,9 @@ from textblob import TextBlob
 st.set_page_config(layout="wide")
 
 
+original_title = '<p style="font-family:Courier; color:#5c0310; font-size: Talk to the bot</p>'
+st.markdown(original_title, unsafe_allow_html=True)
+
 
 t=0
 
