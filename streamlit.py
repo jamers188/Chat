@@ -25,7 +25,7 @@ def get_models():
 if "history" not in st.session_state:
     st.session_state.history = []
 
-st.title(original_text)
+st.title(original_title)
 
 
 def add_bg_from_url():
