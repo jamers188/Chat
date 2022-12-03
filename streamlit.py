@@ -5,11 +5,8 @@ from PIL import Image
 from textblob import TextBlob
 st.set_page_config(layout="wide")
 
-#image = Image.open('Mental Health (1).png')
-st.sidebar.image(image)
 
 
-st.image(image, caption=' ')
 t=0
 
 @st.experimental_singleton
