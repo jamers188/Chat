@@ -62,7 +62,6 @@ def generate_answer():
 
 a=st.text_input("", key="input_text", on_change=generate_answer)
 
-print(st.session_state.history)
 
 
 text = str(a)
@@ -77,6 +76,6 @@ t+=f
 
 
 for chat in st.session_state.history:
-    st_message(**chat)  # unpacking
+    st.write(st_message(**chat)  # unpacking)
 st.write(t)
 
