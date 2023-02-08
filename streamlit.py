@@ -43,7 +43,7 @@ def add_bg_from_url():
 
 add_bg_from_url() 
 
-
+st.session_state.history1 = []
 
 def generate_answer():
     tokenizer, model = get_models()
@@ -54,6 +54,7 @@ def generate_answer():
         result[0], skip_special_tokens=True
     )  # .replace("<s>", "").replace("</s>", "")
 
+    st.session_state.history.append(user_message)
     st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
  
@@ -77,5 +78,5 @@ t+=f
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
-st.write(st.session_state.history)
+st.write(st.session_state.history1)
 
