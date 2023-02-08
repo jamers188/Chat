@@ -62,6 +62,7 @@ def generate_answer():
 
 a=st.text_input("", key="input_text", on_change=generate_answer)
 
+print(st.session_state.history)
 
 
 text = str(a)
