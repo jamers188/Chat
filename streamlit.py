@@ -76,6 +76,6 @@ t+=f
 
 
 for chat in st.session_state.history:
-    st.write(st_message(**chat)  # unpacking)
-st.write(t)
+    st_message(**chat)  # unpacking
+st.write(st.session_state.history)
 
