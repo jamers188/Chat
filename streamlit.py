@@ -54,7 +54,8 @@ def generate_answer():
         result[0], skip_special_tokens=True
     )  # .replace("<s>", "").replace("</s>", "")
 
-    st.session_state.history.append({user_message})
+   # st.session_state.history.append({user_message})
+    st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
  
 
