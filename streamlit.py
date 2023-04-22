@@ -5,10 +5,12 @@ from PIL import Image
 from textblob import TextBlob
 st.set_page_config(layout="wide")
 
+image = Image.open('Mental Health (1).png')
+st.sidebar.image(image)
 
+image = Image.open('header.png')
 
-
-
+st.image(image, caption=' ')
 t=0
 
 @st.experimental_singleton
@@ -24,7 +26,7 @@ def get_models():
 if "history" not in st.session_state:
     st.session_state.history = []
 
-st.title("Talk to the Bot")
+st.title("Talk To The Bot")
 
 
 def add_bg_from_url():
@@ -32,7 +34,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://images.pexels.com/photos/4985271/pexels-photo-4985271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+             background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/01/Pink-Abstract-Floral-Background.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -43,7 +45,7 @@ def add_bg_from_url():
 
 add_bg_from_url() 
 
-st.session_state.history1 = []
+
 
 def generate_answer():
     tokenizer, model = get_models()
@@ -54,7 +56,6 @@ def generate_answer():
         result[0], skip_special_tokens=True
     )  # .replace("<s>", "").replace("</s>", "")
 
-   # st.session_state.history.append({user_message})
     st.session_state.history.append({"message": user_message, "is_user": True})
     st.session_state.history.append({"message": message_bot, "is_user": False})
  
@@ -78,5 +79,4 @@ t+=f
 
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
-st.write(st.session_state.history)
-
+st.write(t)
