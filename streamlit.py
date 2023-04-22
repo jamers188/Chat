@@ -32,7 +32,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://e0.pxfuel.com/wallpapers/631/110/desktop-wallpaper-colourful-background-colour-unicorns-colorful-unicorn.j");
+             background-image: url("https://images.pexels.com/photos/4985271/pexels-photo-4985271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
              background-attachment: fixed;
              background-size: cover
          }}
@@ -75,6 +75,8 @@ t+=f
 
 
 
+
 for chat in st.session_state.history:
     st_message(**chat)  # unpacking
+st.write(st.session_state.history)
 
